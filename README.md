@@ -1,3 +1,2 @@
 # remote-desktop
-dickhead shub j
-nigga
+puneet superstar
