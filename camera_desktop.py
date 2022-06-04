@@ -1,11 +1,7 @@
-import sys
 import cv2
-import numpy as np 
+import numpy as np
 import pyautogui
-if sys.platform == 'linux':
-    import pyscreenshot as ImageGrab
-else:
-    from PIL import ImageGrab
+from PIL import ImageGrab
 from PIL import ImageDraw
 from base_camera import BaseCamera
 

@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <style>
+            .outer{
+                border: 2px solid blueviolet;
+                width:500px;
+                margin-left: 300px;
+                margin-top:150px;
+                padding:100px;
+                background-color: #01F8A2;
+                border-radius:50px;
+            }
+            .conct{
+
+            }
+
+.img{
+    width:30px;
+    border:5px solid red;
+}
+
+        </style>
+        <title>
+            Home
+        </title>
+    </head>
+    <body style="background-color:#01F8D6;">
+        <div class="outer">
+            <img src="{{url_for('static',filename = 'images/Aadmin.png')}}" style="border:2px solid blueviolet;width:200px;margin-top:-193px;margin-left: 148px;border-radius: 500px;background:lightgray;">
+        <div class="form">
+            <form action="/event" method="get">
+                <label style="margin-left:10px;font-size:22px;color:black">Enter Userkey :</label> <input type="text" name="userKey" placeholder="Enter client's userkey" required style="background-color:lightgray;height:30px;width:200px;border-radius:10px;border:none;font-family: ariel;font-size:16px;margin-left: 12px;border-color:red;">
+                <br>
+                <br>
+                <label style="font-size:22px;color:;margin-left:10px;"> Enter Password : </label><input type="password" name="password" placeholder="Enter client's password" required style="background-color:lightgray;height:30px;width:200px;border-radius:10px;border:none;font-family: ariel;font-size:16px;">
+                <br>
+                <br>
+                <input type="submit" value="connect" class="conct" onclick="return check(this.form)" style="margin-left:144px;background-color:gray;border-radius:10px;width:200px;height:50px;font-family: courier;font-size:36px;color:gold;margin-top:25px;">
+            </form>
+            <br>
+            <br>
+        </div>
+        <div>
+            <a href="/usercred" methods='get'>
+            <input type="submit" value="See my userkey and password" style="margin-left:47px;background-color:gray;border-radius:10px;width:400px;height:30px;font-family: courier;font-size:22px;color:gold;">
+            </a>
+        </div>
+        </div>
+    </body>
+</html>
+<script language="javascript">
+                function check(form)
+                {
+
+                    if((form.userKey.value == "192.168.144.112") && (form.password.value == "E7JHygnPMvu8"))
+                    {
+                        return location.href="/usercred";
+                    }
+                    else
+                    {
+                        alert("Error: Wrong Password")
+                        return false;
+                    }
+                }
+</script>
